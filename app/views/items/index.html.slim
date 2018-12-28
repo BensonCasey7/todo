@@ -1,0 +1,7 @@
+h1 Item Index
+h3
+  = @list.name
+ul
+  - @items.each do |item|
+    li
+      = item.content

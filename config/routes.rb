@@ -10,10 +10,13 @@ Rails.application.routes.draw do
   get 'home/index'
   root 'home#index'
 
-  resources :lists
-  resources :items, except: [:new, :create]
-  resources :list, path: '/', only: [] do
-    resources :items, module: :list, only: [:new, :index, :create]
+  resources :lists do
+    resources :items
   end
+  # resources :items, except: [:new, :create]
+  # resources :list, path: '/', only: [] do
+  #   resources :items, module: :list, only: [:new, :index, :create]
+  # end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
