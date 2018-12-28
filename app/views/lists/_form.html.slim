@@ -1,0 +1,14 @@
+= link_to 'Back to Listing', lists_path
+- if @list.errors.any?
+  ul
+    - @list.errors.full_messages.each do |msg|
+      li class="alert alert-danger"
+        = msg
+
+= form_for @list do |f|
+  .
+    = f.label :name
+  .
+    = f.text_field :name
+
+  = f.submit
