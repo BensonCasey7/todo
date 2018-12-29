@@ -1,0 +1,13 @@
+- case Time.new.hour
+- when 0..4
+  | Good evening, 
+- when 5..11
+  | Good morning, 
+- when 12..17
+  | Good afternoon, 
+- when 18..24
+  | Good evening, 
+- else
+  | Welcome, 
+= current_user.name
+| !

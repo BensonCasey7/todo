@@ -1,0 +1,16 @@
+.text-center.home-header
+  = render 'greeting'
+.container
+  .row
+    .col-md-4.home-col
+      .home-col-header Lists
+      ul.list-unstyled.home-list-list
+        - current_user.lists.each do |list|
+          = link_to list_items_path(list) do
+            li = list.name
+    .col-md-4.home-col
+      .home-col-header High Priority
+      i.text-muted Coming soon
+    .col-md-4.home-col
+      .home-col-header Due Soon
+      i.text-muted Coming soon

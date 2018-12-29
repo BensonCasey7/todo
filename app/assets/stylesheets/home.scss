@@ -1,3 +1,31 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'variables';
+
+.home-header {
+  padding-top: 15px;
+  font-size: 42px;
+}
+
+.home-col {
+  .home-col-header {
+    font-size: 30px;
+    border-bottom: 1.5px solid $slateGray;
+    text-align: center;
+  }
+
+  .home-list-list {
+    text-align: left;
+    a {
+      font-size: 24px;
+      color: $black;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    li:hover {
+      background-color: $lightGray;
+    }
+  }
+}
