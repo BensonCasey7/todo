@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+// https://coolors.co/2f4858-33658a-4191b2-f6ae2d-f26419
+
+$slateGray: #2f4858;
+$tealBlue: #33658a;
+$steelBlue: #4191b2;
+$saffron: #f6ae2d;
+$giantsOrange: #f26419;
+
+$white: #FFFFFF;
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Montserrat|Quicksand|Varela+Round');
+$varelaRound: 'Varela Round', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$pacifico: 'Pacifico', sans-serif;
+$quicksand: 'Quicksand', sans-serif;
+
+body {
+  font-family: $varelaRound;
+}
+
+.navbar {
+  font-family: $quicksand;
+  background-color: $slateGray;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+
+  .navbar-brand {
+    font-family: $pacifico;
+    font-size: 36px;
+  }
+
+  .nav-main-links {
+    font-size: 24px;
+  }
+}
+
+.lists-header {
+  padding-top: 10px;
+}
+
+.list-row {
+  background-color: #EEE;
+  border: 1.5px solid $slateGray;
+  margin: 5px;
+  border-radius: 10px;
+
+  .title {
+    font-size: 24px;
+  }
+
+  .actions {
+    font-size: 18px;
+  }
+}
