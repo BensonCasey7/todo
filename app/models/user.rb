@@ -22,4 +22,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :lists, dependent: :destroy
+
+  def top_lists
+    lists[0...5]
+  end
 end

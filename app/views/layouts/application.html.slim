@@ -11,10 +11,10 @@ html
   body
     = render 'layouts/navbar'
     - if notice
-      p class="notice"
+      p class="flash-notice"
         = notice
     - if alert
-      p class="alert"
+      p class="flash-alert"
         = alert
     .container-fluid
       = yield

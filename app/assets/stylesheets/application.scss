@@ -23,6 +23,20 @@ body {
   font-family: $pacifico;
 }
 
+.flash-notice {
+  text-align: center;
+  background-color: $noticeGreen;
+  color: $black;
+  font-size: 24px;
+}
+
+.flash-alert {
+  text-align: center;
+  background-color: $alertRed;
+  color: $white;
+  font-size: 24px;
+}
+
 .navbar {
   font-family: $quicksand;
   background-color: $slateGray;
@@ -46,21 +60,3 @@ body {
   }
 }
 
-.lists-header {
-  padding-top: 10px;
-}
-
-.list-row {
-  background-color: #EEE;
-  border: 1.5px solid $slateGray;
-  margin: 5px;
-  border-radius: 10px;
-
-  .title {
-    font-size: 24px;
-  }
-
-  .actions {
-    font-size: 18px;
-  }
-}

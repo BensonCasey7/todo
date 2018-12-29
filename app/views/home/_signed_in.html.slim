@@ -4,10 +4,15 @@
   .row
     .col-md-4.home-col
       .home-col-header Lists
-      ul.list-unstyled.home-list-list
-        - current_user.lists.each do |list|
+      ul.list-unstyled.home-lists-list
+        - current_user.top_lists.each do |list|
           = link_to list_items_path(list) do
             li = list.name
+        - if current_user.lists.count > 5
+          = link_to lists_path do
+            li.action-list View all lists...
+        = link_to new_list_path do
+          li.action-list Create new list
     .col-md-4.home-col
       .home-col-header High Priority
       i.text-muted Coming soon
