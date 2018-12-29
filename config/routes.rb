@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :lists do
     resources :items
   end
+
+  # resources :lists
   # resources :items, except: [:new, :create]
   # resources :list, path: '/', only: [] do
   #   resources :items, module: :list, only: [:new, :index, :create]

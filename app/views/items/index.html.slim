@@ -1,7 +1,10 @@
-h1 Item Index
-h3
+h1
   = @list.name
+= link_to 'Create new to do item', new_list_item_path
 ul
   - @items.each do |item|
     li
       = item.content
+      = link_to ' Show', list_item_path(@list, item)
+      = link_to ' Edit', edit_list_item_path(@list, item)
+      = link_to ' Delete', [@list, item], method: :delete, data: {confirm: "Are you sure you'd like to delete this list?"}
