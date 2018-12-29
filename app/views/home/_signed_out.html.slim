@@ -1,1 +1,16 @@
-h1 Signed out
+.home-signed-out
+  .header
+    .signed-out
+      | Welcome to 
+      span.logo ToDo
+  .body
+    .row.justify-content-md-center
+      .col-md-6
+        | Create unlimited 
+        span.logo ToDo
+        |  lists that you can access anytime, anywhere, on any device
+        br
+        br Sign up is quick and easy!
+        = link_to new_user_registration_path do
+          .sign-up-button
+            | Create a new account

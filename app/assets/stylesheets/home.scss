@@ -4,7 +4,7 @@
 @import 'variables';
 
 .home-header {
-  padding-top: 15px;
+  padding: 15px;
   font-size: 42px;
 }
 
@@ -27,5 +27,34 @@
     li:hover {
       background-color: $lightGray;
     }
+  }
+}
+
+.home-signed-out {
+  text-align: center;
+  .body {
+    font-size: 30px;
+  }
+  .header {
+    padding: 15px;
+    font-size: 56px;
+  }
+  .sign-up-button {
+    width: fit-content;
+    margin: auto;
+    background-color: $saffron;
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color .3s;
+  }
+  .sign-up-button:hover{
+    background-color: $giantsOrange;
+  }
+  a {
+    color: $black;
+  }
+  a:hover {
+    text-decoration: none;
   }
 }

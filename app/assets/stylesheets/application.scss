@@ -19,6 +19,10 @@ body {
   font-family: $varelaRound;
 }
 
+.logo {
+  font-family: $pacifico;
+}
+
 .navbar {
   font-family: $quicksand;
   background-color: $slateGray;
@@ -32,6 +36,9 @@ body {
   .navbar-brand {
     font-family: $pacifico;
     font-size: 36px;
+    a {
+      text-decoration: none;
+    }
   }
 
   .nav-main-links {
