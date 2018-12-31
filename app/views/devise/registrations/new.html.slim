@@ -1,29 +1,24 @@
-h2 Sign up
-
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-
-  .field
-    = f.label :name
-    br
-    = f.text_field :name, autofocus: true, autocomplete: "name"
-
-  .field
-    = f.label :email
-    br
-    = f.email_field :email, autocomplete: "email"
-
-  .field
-    = f.label :password
-    br
-    = f.password_field :password, autocomplete: "new-password"
-
-  .field
-    = f.label :password_confirmation
-    br
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-
-  .actions
-    = f.submit "Sign up"
-
-= render "devise/shared/links"
+.row.justify-content-md-center
+  .col-md-3.user-form
+    .header Sign up!
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = devise_error_messages!
+      .label
+        = f.label :name
+      .text-field
+        = f.text_field :name, autofocus: true, autocomplete: "name"
+      .label
+        = f.label :email
+      .text-field
+        = f.email_field :email, autocomplete: "email"
+      .label
+        = f.label :password
+      .text-field
+        = f.password_field :password, autocomplete: "new-password"
+      .label
+        = f.label :password_confirmation
+      .text-field
+        = f.password_field :password_confirmation, autocomplete: "new-password"
+      .actions
+        = f.submit "Sign up"
+    = render "devise/shared/links"

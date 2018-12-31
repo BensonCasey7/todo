@@ -23,6 +23,19 @@ body {
   font-family: $pacifico;
 }
 
+.button {
+  width: fit-content;
+  background-color: $blueberry;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color .3s;
+  border: none;
+  color: white;
+}
+.button:hover{
+  background-color: $blueberryHover;
+}
+
 .flash-notice {
   text-align: center;
   background-color: $noticeGreen;
@@ -35,6 +48,10 @@ body {
   background-color: $alertRed;
   color: $white;
   font-size: 24px;
+}
+
+.app-body {
+  margin-top: 15px;
 }
 
 .navbar {

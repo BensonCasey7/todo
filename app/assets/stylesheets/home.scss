@@ -5,7 +5,7 @@
 
 .home-header {
   padding: 15px;
-  font-size: 42px;
+  font-size: 54px;
 }
 
 .home-col {
@@ -43,19 +43,13 @@
     font-size: 56px;
   }
   .sign-up-button {
-    width: fit-content;
     margin: auto;
     background-color: $saffron;
-    padding: 5px;
     margin-top: 20px;
-    border-radius: 5px;
-    transition: background-color .3s;
+    color: $black;
   }
   .sign-up-button:hover{
     background-color: $giantsOrange;
-  }
-  a {
-    color: $black;
   }
   a:hover {
     text-decoration: none;
