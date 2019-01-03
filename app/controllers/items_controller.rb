@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_list!
+  before_action :auth_check
 
   def index
     @items = @list.items
@@ -49,5 +50,10 @@ class ItemsController < ApplicationController
 
     def allowed_params
       params.require(:item).permit(:content)
+    end
+
+    def auth_check
+      puts current_user.is_list_owner(@list)
+      redirect_to root_path if not current_user.is_list_owner(@list)
     end
 end

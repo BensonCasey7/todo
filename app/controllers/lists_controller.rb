@@ -6,6 +6,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    auth_check
   end
 
   def new
@@ -44,5 +45,9 @@ class ListsController < ApplicationController
   private
     def allowed_params
       params.require(:list).permit(:name)
+    end
+
+    def auth_check
+      redirect_to root_path if not current_user.is_list_owner(@list)
     end
 end

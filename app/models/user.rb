@@ -26,4 +26,8 @@ class User < ApplicationRecord
   def top_lists
     lists[0...5]
   end
+
+  def is_list_owner(list)
+    lists.include?(list)
+  end
 end
