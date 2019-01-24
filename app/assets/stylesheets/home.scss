@@ -11,7 +11,7 @@
 .home-col {
   .home-col-header {
     font-size: 30px;
-    border-bottom: 1.5px solid $slateGray;
+    border-bottom: 1.5px solid $navy;
     text-align: center;
   }
 
@@ -28,7 +28,7 @@
       background-color: $lightGray;
     }
     .action-list {
-      color: $giantsOrange;
+      color: $orange;
     }
   }
 }
@@ -44,12 +44,12 @@
   }
   .sign-up-button {
     margin: auto;
-    background-color: $saffron;
+    background-color: $orange;
     margin-top: 20px;
     color: $black;
   }
   .sign-up-button:hover{
-    background-color: $giantsOrange;
+    background-color: $orangeHover;
   }
   a:hover {
     text-decoration: none;
