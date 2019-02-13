@@ -10,5 +10,10 @@
     = f.label :content
   .
     = f.text_field :content
-
+  .
+    = f.label :priority
+  .
+    = f.select(:priority, options_for_select(@item.priority_opts), :include_blank => true)
+  /.
+    = f.number_field(:priority, in: 0...2, step: 1)
   = f.submit

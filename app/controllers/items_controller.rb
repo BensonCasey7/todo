@@ -49,7 +49,7 @@ class ItemsController < ApplicationController
     end 
 
     def allowed_params
-      params.require(:item).permit(:content)
+      params.require(:item).permit(:content, :priority)
     end
 
     def auth_check
