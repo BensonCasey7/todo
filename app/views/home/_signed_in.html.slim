@@ -15,7 +15,10 @@
           li.action-list Create new list
     .col-md-4.home-col
       .home-col-header High Priority
-      i.text-muted Coming soon
+      ul.list-unstyled.home-lists-list
+        - current_user.high_priority.each do |item|
+          = link_to list_item_path(item.list, item) do
+            li = item.content
     .col-md-4.home-col
       .home-col-header Due Soon
       i.text-muted Coming soon

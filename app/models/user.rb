@@ -22,6 +22,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :lists, dependent: :destroy
+  has_many :items, through: :lists
 
   def top_lists
     lists[0...5]
@@ -29,5 +30,9 @@ class User < ApplicationRecord
 
   def is_list_owner(list)
     lists.include?(list)
+  end
+
+  def high_priority
+    items.where(priority: "High")
   end
 end
