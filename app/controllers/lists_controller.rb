@@ -43,11 +43,12 @@ class ListsController < ApplicationController
   end
 
   private
-    def allowed_params
-      params.require(:list).permit(:name)
-    end
 
-    def auth_check
-      redirect_to root_path if not current_user.is_list_owner(@list)
-    end
+  def allowed_params
+    params.require(:list).permit(:name)
+  end
+
+  def auth_check
+    redirect_to root_path unless current_user.list_owner?(@list)
+  end
 end

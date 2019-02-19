@@ -28,11 +28,11 @@ class User < ApplicationRecord
     lists[0...5]
   end
 
-  def is_list_owner(list)
+  def list_owner?(list)
     lists.include?(list)
   end
 
   def high_priority
-    items.where(priority: "High")
+    items.where(priority: 'High')
   end
 end

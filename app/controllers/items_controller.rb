@@ -44,16 +44,17 @@ class ItemsController < ApplicationController
   end
 
   private
-    def set_list!
-      @list = List.includes(:items).find_by!(id: params[:list_id])
-    end 
 
-    def allowed_params
-      params.require(:item).permit(:content, :priority)
-    end
+  def set_list!
+    @list = List.includes(:items).find_by!(id: params[:list_id])
+  end
 
-    def auth_check
-      puts current_user.is_list_owner(@list)
-      redirect_to root_path if not current_user.is_list_owner(@list)
-    end
+  def allowed_params
+    params.require(:item).permit(:content, :priority)
+  end
+
+  def auth_check
+    puts current_user.list_owner?(@list)
+    redirect_to root_path unless current_user.list_owner?(@list)
+  end
 end
