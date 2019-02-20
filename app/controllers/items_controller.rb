@@ -54,7 +54,6 @@ class ItemsController < ApplicationController
   end
 
   def auth_check
-    puts current_user.list_owner?(@list)
     redirect_to root_path unless current_user.list_owner?(@list)
   end
 end
